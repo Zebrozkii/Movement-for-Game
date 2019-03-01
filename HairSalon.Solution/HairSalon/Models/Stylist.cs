@@ -23,7 +23,7 @@ namespace HairSalon.Models
   }
   public static List<Stylist> GetAll()
   {
-    List<Stylist> allItem = new List<Stylist>{};
+    List<Stylist> allItems = new List<Stylist>{};
     MySqlConnection conn = DB.Connection();
     conn.Open();
     MySqlCommand cmd = conn.CreateCommand() as MySqlCommand;
@@ -40,6 +40,7 @@ namespace HairSalon.Models
     {
       conn.Dispose();
     }
+    return allItems;
   }
   }
 
